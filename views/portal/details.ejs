@@ -1,0 +1,27 @@
+<%- include('header'); %>
+<div class="container">
+    <!-- <div class="alert alert-success">
+        <h1>Vew details of users</h1>
+    </div> -->
+    <header class="jumbotron"style="background:azure">
+        <div class="container" style="background: azure;">
+        <p>View contact details of the users.</p>
+        </div>
+     </header>   
+    <div class="row" style="display:flex; flex-wrap:wrap;font-family:sans-serif; font: size 30px;">
+        <% user.forEach(function(user){ %>
+            <div class="col-lg-4 col-sm-6 thumbnail" style="text-align:center; background:rgba(181, 212, 220, 0.913);">
+                <h2><strong>Name:</strong><%=user.name %></h2>
+                <h2><strong>Email:</strong><%=user.email %></h2>
+                <h2><strong></strong><%=user.job %></h2>
+                <h2><strong>Batch:</strong><%=user.batch %></h2>
+                <h2><strong>Branch:</strong><%=user.branch %></h2>
+                <h2><strong></strong><%=user.ys %></h2>
+
+            </div>
+        <% }); %>
+    </div>
+
+</div>
+
+<%- include('footer'); %>
